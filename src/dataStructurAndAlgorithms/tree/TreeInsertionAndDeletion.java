@@ -2,9 +2,11 @@ package dataStructurAndAlgorithms.tree;
 import java.util.*;
 public class TreeInsertionAndDeletion {
 
+	static TreeInsertionAndDeletion tt;
 	static Scanner sc=null;
 	public static void main(String[] args)
 	{
+		tt=new TreeInsertionAndDeletion();
 		sc=new Scanner(System.in);
 		Node root=createTree();
 		inOrder(root);
@@ -20,7 +22,7 @@ public class TreeInsertionAndDeletion {
 		{
 			return null;
 		}else{
-			root=new Node(data);
+			root=tt.new Node(data);
 			System.out.println("Enter the left data: "+data);
 			root.left=createTree();
 			System.out.println("Enter the right data: "+data);
@@ -39,7 +41,7 @@ public class TreeInsertionAndDeletion {
 			inOrder(root.right);
 		}
 	}
-	class Node{
+public class Node{
 
 	  Node left,right;
 	  int data;

@@ -1,7 +1,10 @@
 package string;
 
 import java.util.Scanner;
-
+/*
+ It take o(n) time
+ space o(n)
+ */
 public class AnagramOptimize {
 
 	public static void main(String[] args) {

@@ -9,6 +9,11 @@ public class Anagram {
 		String a=sc.next();
 		System.out.println("Enter the second String: ");
 		String b=sc.next();
+		System.out.println(anagram(a,b));
+		sc.close();
+	}
+	static String anagram(String a,String b)
+	{
 		int arr1[]=new int[256];
 		int arr2[]=new int[256];
 		for(char c:a.toCharArray())
@@ -30,8 +35,7 @@ public class Anagram {
 				break;
 			}
 		}
-		System.out.println(s);
-		sc.close();
+		return s;
 	}
 
 }

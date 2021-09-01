@@ -10,6 +10,7 @@ public class RemoveDuplicateCharFromString {
 		String s=sc.nextLine();
 		int n=s.length();
 		System.out.println(removeDuplicate(s,n));
+		System.out.println(removeDuplicate(s));		
 		sc.close();
 
 	}
@@ -29,6 +30,22 @@ public class RemoveDuplicateCharFromString {
 		}
 		String str=String.valueOf(st);
 		return str;
+	}
+	static String removeDuplicate(String s)
+	{
+		LinkedHashSet<Character> lhs=new LinkedHashSet<>();
+		for(int i=0;i<s.length();i++)
+		{
+		    lhs.add(s.charAt(i));
+		}
+		char ch1[]=new char[lhs.size()];
+		int i=0;
+		for(Character ch:lhs)
+		{
+		    ch1[i++]=ch;
+		}
+		String s1=String.valueOf(ch1);
+		return s1;
 	}
 
 }

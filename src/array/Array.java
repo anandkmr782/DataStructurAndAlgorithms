@@ -1,28 +1,37 @@
 package array;
 
-import java.util.Arrays;
-import java.util.HashSet;
+import java.util.*;
 
 public class Array {
 
 	public static void main(String[] args) {
-		int arr[]= {11,11,11,13,13,20};
-		int n=6;
-//		int a[]=duplicate(arr,n);
-//		for(int e:a)
-//		{
-//			System.out.print(e+" ");
-//		}
-
+		
+		ArrayList<Integer> as=new ArrayList<>();
+		as.add(20);
+		as.add(30);
+		as.add(10);
+		as.add(40);
+		as.add(50);
+		int n=as.size();
+		reverseOrder(n,as);
+		
 	}
-//	static int[] duplicate(int[] arr,int n)
-//	{
-//		Arrays.sort(arr);		
-//		for(int i=0;i<n;i++)
-//		{
-//			if()
-//		}
-//		
-//	}
+	static void reverseOrder(int n,ArrayList<Integer> as)
+	{
+		int s=n/2;
+		int i=s,j=n-1;
+		while(i<j)
+		{
+			int temp=as.get(i);
+			as.set(i, as.get(j));
+			as.set(j,temp);
+			i++;
+			j--;
+		}
+		for(int e:as)
+		{
+			System.out.println(e+" ");
+		}
+	}
 
 }
